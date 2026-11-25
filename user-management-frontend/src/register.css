@@ -1,0 +1,257 @@
+/* Main Container */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  padding: 1rem;
+  animation: backgroundAnimation 6s ease infinite;
+}
+
+/* Register Card */
+.register-card {
+  width: 100%;
+  max-width: 28rem;
+  background-color: #1f2937;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(10px);
+  opacity: 0;
+  animation: cardAnimation 0.6s forwards;
+}
+
+/* Keyframe for background animation */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #111827, #1f2937);
+  }
+  50% {
+    background: linear-gradient(135deg, #1f2937, #111827);
+  }
+  100% {
+    background: linear-gradient(135deg, #111827, #1f2937);
+  }
+}
+
+@keyframes cardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title */
+.register-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #dc2626;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 6px rgba(220, 38, 38, 0.4);
+}
+
+/* Error Message */
+.register-error {
+  background-color: rgba(220, 38, 38, 0.1);
+  border: 1px solid #dc2626;
+  color: #fca5a5;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(220, 38, 38, 0.3);
+}
+
+/* Success Message */
+.register-success {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid #22c55e;
+  color: #86efac;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3);
+}
+
+/* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Form Label */
+.form-label {
+  display: block;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* Form Input */
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #4b5563;
+  border-radius: 0.5rem;
+  background-color: #111827;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  background-color: #0f1419;
+}
+
+/* Hover effect on form input */
+.form-input:hover {
+  border-color: #9ca3af;
+  background-color: #111827;
+  transform: scale(1.02);
+}
+
+/* Form Select */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-select option {
+  background-color: #1f2937;
+  color: white;
+  padding: 0.5rem;
+}
+
+.form-select option:hover {
+  background-color: #374151;
+}
+
+/* Hover effect on form select */
+.form-select:hover {
+  border-color: #9ca3af;
+  background-color: #111827;
+  transform: scale(1.02);
+}
+
+/* Register Button */
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #dc2626;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+}
+
+/* Hover and Active states for Register Button */
+.register-button:hover:not(:disabled) {
+  background-color: #b91c1c;
+  box-shadow: 0 6px 12px rgba(220, 38, 38, 0.4);
+  transform: scale(1.05);
+}
+
+.register-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.register-button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.register-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Login Section */
+.login-section {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.login-text {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.login-link {
+  display: inline;
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on login link */
+.login-link:hover {
+  color: #b91c1c;
+  text-decoration: underline;
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .register-card {
+    padding: 1.5rem;
+  }
+
+  .register-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .register-form {
+    gap: 1rem;
+  }
+}
+
+/* Focus visible for accessibility */
+.form-input:focus-visible,
+.form-select:focus-visible,
+.register-button:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
